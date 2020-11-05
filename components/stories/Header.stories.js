@@ -1,7 +1,5 @@
 import React from 'react';
-
 import Navigation from '../Navigation';
-import Theme from '../Theme/Theme';
 
 export default {
   title: 'Example/Header',
@@ -9,8 +7,6 @@ export default {
 };
 
 export const Navbar = () => (
-  <Theme>
     <Navigation />
-  </Theme>
 );
  
