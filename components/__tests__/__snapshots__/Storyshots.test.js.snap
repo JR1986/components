@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Navigation/Header Navbar 1`] = `
+<header
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+>
+  <div
+    className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+  >
+    <h6
+      className="MuiTypography-root MuiBox-root MuiBox-root-1 MuiTypography-h6"
+    >
+      Home
+    </h6>
+    <h6
+      className="MuiTypography-root MuiBox-root MuiBox-root-2 MuiTypography-h6"
+    >
+      About
+    </h6>
+    <h6
+      className="MuiTypography-root MuiBox-root MuiBox-root-3 MuiTypography-h6"
+    >
+      Services
+    </h6>
+    <h6
+      className="MuiTypography-root MuiBox-root MuiBox-root-4 MuiTypography-h6"
+    >
+      Contact
+    </h6>
+  </div>
+</header>
+`;
+
+exports[`Storyshots Typography/Typography Body Text 1`] = `
+Array [
+  <p
+    className="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary"
+  >
+    Body1
+  </p>,
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+  >
+    Body2
+  </p>,
+]
+`;
+
+exports[`Storyshots Typography/Typography Button 1`] = `
+<span
+  className="MuiTypography-root MuiTypography-button"
+>
+  Button
+</span>
+`;
+
+exports[`Storyshots Typography/Typography Caption 1`] = `
+<span
+  className="MuiTypography-root MuiTypography-caption"
+>
+  Caption
+</span>
+`;
+
+exports[`Storyshots Typography/Typography Headings 1`] = `
+Array [
+  <h1
+    className="MuiTypography-root MuiTypography-h1"
+  >
+    Headline 1
+  </h1>,
+  <h2
+    className="MuiTypography-root MuiTypography-h2"
+  >
+    Headline 2
+  </h2>,
+  <h3
+    className="MuiTypography-root MuiTypography-h3"
+  >
+    Headline 3
+  </h3>,
+  <h4
+    className="MuiTypography-root MuiTypography-h4"
+  >
+    Headline 4
+  </h4>,
+  <h5
+    className="MuiTypography-root MuiTypography-h5"
+  >
+    Headline 5
+  </h5>,
+  <h6
+    className="MuiTypography-root MuiTypography-h6"
+  >
+    Headline 6
+  </h6>,
+]
+`;
+
+exports[`Storyshots Typography/Typography Overline 1`] = `
+<span
+  className="MuiTypography-root MuiTypography-overline"
+>
+  Overline
+</span>
+`;
+
+exports[`Storyshots Typography/Typography Subtitles 1`] = `
+Array [
+  <h6
+    className="MuiTypography-root MuiTypography-subtitle1"
+  >
+    Subtitle1
+  </h6>,
+  <h6
+    className="MuiTypography-root MuiTypography-subtitle2"
+  >
+    Subtitle2
+  </h6>,
+]
+`;

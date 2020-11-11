@@ -7,6 +7,5 @@ export default {
 };
 
 export const Navbar = () => (
-    <Navigation />
+  <Navigation />
 );
- 
