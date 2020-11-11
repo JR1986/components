@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../Navigation';
 
 export default {
-  title: 'Example/Header',
+  title: 'Navigation/Header',
   component: Navigation,
 };
 
