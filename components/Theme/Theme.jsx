@@ -6,10 +6,10 @@ import { bodyFont, headingFont } from './fonts';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#1D3557',
+      main: '#2962ff',
     },
     secondary: {
-      main: '#E63946',
+      main: '#ff6d00',
     },
   },
   typography: {
