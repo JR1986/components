@@ -11,6 +11,10 @@ const theme = createMuiTheme({
     secondary: {
       main: '#ff6d00',
     },
+    text: {
+      primary: 'rgba(0,0,0,0.87)',
+      secondary: '#fff',
+    },
   },
   typography: {
     body1: {
