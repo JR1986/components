@@ -2,18 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { bodyFont, headingFont } from './fonts';
+import palette from './variables';
+
+const {
+  primary, secondary, textPrimary, textSecondary,
+} = palette;
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#2962ff',
+      main: primary,
     },
     secondary: {
-      main: '#ff6d00',
+      main: secondary,
     },
     text: {
-      primary: 'rgba(0,0,0,0.87)',
-      secondary: '#fff',
+      primary: textPrimary,
+      secondary: textSecondary,
     },
   },
   typography: {
