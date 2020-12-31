@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { bodyFont, headingFont } from './fonts';
-import palette from './variables';
+import { palette } from './variables';
 
 const {
   primary, secondary, textPrimary, textSecondary,
@@ -45,6 +45,16 @@ const theme = createMuiTheme({
     },
     heading6: {
       fontFamily: headingFont,
+    },
+  },
+  components: {
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: primary,
+          minWidth: '230px',
+        },
+      },
     },
   },
 });

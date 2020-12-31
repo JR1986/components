@@ -12,7 +12,7 @@ const StyledToolbar = styled(Toolbar)`
   && {
     display: none;
 
-    @media (min-width: 840px) {
+    @media (min-width: 1024px) {
       display: flex;
       justify-content: flex-end;
       width: 100%;
@@ -31,14 +31,11 @@ const NavigationTypography = styled(Typography)`
   }
 `;
 
-const StyledDrawer = styled(Drawer)`
-  .MuiDrawer-paper {
-    background-color: ${(props) => props.drawerColor};
-    min-width: 230px;
-  }
-
-  @media (min-width: 840px) {
-    display: none;
+const StyledIconButton = styled(IconButton)`
+  && {
+    @media (min-width: 1024px) {
+      display: none;
+    }
   }
 `;
 
@@ -49,7 +46,7 @@ const StyledAppBar = styled(AppBar)`
   }
 `;
 
-const Navigation = ({ links, drawerColor }) => {
+const Navigation = ({ links }) => {
   const [open, setOpen] = useState(false);
 
   const handleDrawer = () => setOpen(true);
@@ -57,16 +54,16 @@ const Navigation = ({ links, drawerColor }) => {
 
   return (
     <StyledAppBar position="static">
-      <IconButton
+      <StyledIconButton
         onClick={handleDrawer}
         color="inherit"
       >
         <MenuIcon />
-      </IconButton>
+      </StyledIconButton>
       <StyledToolbar>
-        <StyledDrawer open={open} onClose={handleClose} drawerColor={drawerColor}>
+        <Drawer open={open} onClose={handleClose}>
           {links}
-        </StyledDrawer>
+        </Drawer>
         {links}
       </StyledToolbar>
     </StyledAppBar>
@@ -75,12 +72,10 @@ const Navigation = ({ links, drawerColor }) => {
 
 Navigation.propTypes = {
   links: PropTypes.arrayOf(PropTypes.node),
-  drawerColor: PropTypes.string,
 };
 
 Navigation.defaultProps = {
   links: null,
-  drawerColor: '#000',
 };
 
 export { NavigationTypography, Navigation };

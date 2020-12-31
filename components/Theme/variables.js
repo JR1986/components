@@ -5,4 +5,6 @@ const palette = {
   textSecondary: '#fff',
 };
 
-export default palette;
+const otherVariables = {};
+
+export { palette, otherVariables };

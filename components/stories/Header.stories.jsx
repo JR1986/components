@@ -31,7 +31,7 @@ export const Navbar = () => (
     links={links.map((link) => {
       const { name, href } = link;
       return (
-        <Anchor href={href}>
+        <Anchor key={name} href={href}>
           <NavigationTypography variant="subtitle2" color="textSecondary">
             {name}
           </NavigationTypography>
