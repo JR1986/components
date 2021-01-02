@@ -7,9 +7,9 @@ const StyledAnchor = styled.a`
 `;
 
 const Anchor = ({
-  href, target, rel, children,
+  href, target, children,
 }) => (
-  <StyledAnchor href={href} target={target} rel={rel}>
+  <StyledAnchor href={href} target={target} rel={target === '_blank' ? 'nofollow noopener' : null}>
     {children}
   </StyledAnchor>
 );
@@ -17,14 +17,12 @@ const Anchor = ({
 Anchor.propTypes = {
   href: PropTypes.string,
   target: PropTypes.string,
-  rel: PropTypes.string,
   children: PropTypes.node,
 };
 
 Anchor.defaultProps = {
   href: null,
   target: null,
-  rel: null,
   children: null,
 };
 
