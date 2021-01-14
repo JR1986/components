@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import Grid from '../Grid';
 
-const StyledFooter = styled.footer`
+const StyledGrid = styled(Grid)`
   padding: 32px 16px;
   background-color: black;
 
@@ -12,12 +12,10 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const Footer = ({ children }) => (
-  <StyledFooter>
-    <Grid container>
-      {children}
-    </Grid>
-  </StyledFooter>
+const Footer = ({ children, ...props }) => (
+  <StyledGrid component="footer" container {...props}>
+    {children}
+  </StyledGrid>
 );
 
 Footer.propTypes = {

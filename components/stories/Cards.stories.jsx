@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card';
 import Grid from '../Grid';
+import data from '../stories.data/testData';
 
 export default {
   title: 'Cards/Card',
@@ -8,12 +9,17 @@ export default {
 
 export const Cards = () => (
   <Grid container spacing={3}>
-    <Grid item lg={3} xs={12}>
-      <Card
-        cardHeading="Card headline"
-        cardBody="Card body text Card body text Card body text Card body text Card body text Card body text"
-        image="https://fashionunited.com/PDyXAGRV7PqcigwS2XEJKA5vYMN152HWjG4la4ldIkc/gravity:sm/quality:70/aHR0cHM6Ly9mYXNoaW9udW5pdGVkLmNvbS9pbWcvbWFzdGVyLzIwMjAvMTIvMzEvZGVza3RvcC1zczIxLWluZGV4LTEwNTB4NTgwLTAtem5vYjBsZWEtMjAyMC0xMi0zMS5qcGVn?v=Article"
-      />
-    </Grid>
+    {data.map((item) => {
+      const { title, description, imageUrl } = item;
+      return (
+        <Grid item lg={3} xs={12} md={4} sm={6}>
+          <Card
+            cardHeading={title}
+            cardBody={description}
+            image={imageUrl}
+          />
+        </Grid>
+      );
+    })}
   </Grid>
 );
