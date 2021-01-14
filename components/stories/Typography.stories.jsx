@@ -19,8 +19,8 @@ export const Headings = () => (
 
 export const BodyText = () => (
   <>
-    <Typography variant="body1" color="textSecondary">Body1</Typography>
-    <Typography variant="body2" color="textSecondary">Body2</Typography>
+    <Typography variant="body1">Body1</Typography>
+    <Typography variant="body2">Body2</Typography>
   </>
 );
 

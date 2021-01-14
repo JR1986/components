@@ -8,7 +8,7 @@ export default {
 
 export const Cards = () => (
   <Grid container spacing={3}>
-    <Grid item xs={3}>
+    <Grid item lg={3} xs={12}>
       <Card
         cardHeading="Card headline"
         cardBody="Card body text Card body text Card body text Card body text Card body text Card body text"
