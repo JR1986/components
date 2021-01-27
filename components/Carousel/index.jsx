@@ -9,38 +9,37 @@ const Container = styled.div`
 `;
 
 const IconContainer = styled.span`
-    position: absolute;
     background-color: white;
-    top: 300px;
+    cursor: pointer;
     ${(props) => (props.left ? 'left: 50px' : null)};
     ${(props) => (props.right ? 'right: 50px' : null)};
 `;
 
 const ImageContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    text-align: center;
 `;
 
 const Carousel = ({ images }) => {
-  const [image, setImage] = useState(0);
+  const [active, setActive] = useState(0);
 
-  const handleImage = () => {
+  const handleRight = () => {
+    setActive(active === images.length - 1 ? 0 : active + 1);
+  };
 
+  const handleLeft = () => {
+    setActive(active === 0 ? images.length - 1 : active - 1);
   };
 
   return (
     <Container>
-      {images.map((image) => (
-        <ImageContainer>
-          {image}
-        </ImageContainer>
-      ))}
-      <IconContainer left onClick={handleImage}>
+      <ImageContainer>
+        {images[active]}
+      </ImageContainer>
+      <IconContainer onClick={handleLeft}>
         <KeyboardArrowLeftIcon />
       </IconContainer>
-      <IconContainer right>
-        <KeyboardArrowRightIcon />
+      <IconContainer>
+        <KeyboardArrowRightIcon onClick={handleRight} />
       </IconContainer>
     </Container>
   );
