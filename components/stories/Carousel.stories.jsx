@@ -7,7 +7,24 @@ export default {
   component: Carousel,
 };
 
-export const ImageSlider = () => (
+export const AutoSlide = () => (
+  <Carousel
+    autoSlide
+    images={
+        data.map((item) => {
+          const { imageUrl } = item;
+          return (
+            <img
+              src={imageUrl}
+              alt="test"
+            />
+          );
+        })
+    }
+  />
+);
+
+export const Slide = () => (
   <Carousel
     images={
         data.map((item) => {
