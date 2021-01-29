@@ -6,12 +6,15 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 const IconContainer = styled.span`
     background-color: white;
-    padding: 8px;
     cursor: pointer;
     position: absolute;
     top: calc(50% - 12px);
     ${(props) => (props.left ? 'left: 5%' : null)};
     ${(props) => (props.right ? 'right: 5%' : null)};
+
+    svg {
+      padding: 8px;
+    }
 `;
 
 const ImageContainer = styled.div`
