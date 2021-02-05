@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-// import ExpandMore from '@material-ui/icons/ExpandMore';
+import ExpandMore from '@material-ui/icons/ExpandMore';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import { Button } from '../Button';
 
@@ -12,7 +12,7 @@ const showCollapse = `
 
 const hideCollapse = `
   max-height: 0;
-  transition: max-height 700ms ease;
+  transition: max-height 800ms ease;
 `;
 
 const showText = `
@@ -22,7 +22,7 @@ const showText = `
 
 const hideText = `
   opacity: 0;
-  top: 30px;
+  top: 60px;
 `;
 
 const CollapseContent = styled.div`
@@ -36,20 +36,13 @@ const CollapseContent = styled.div`
     position: relative;
     margin: 0;
     padding: 16px;
-    ${(props) => (props.openCollapse ? showText : hideText)};
+    ${({ openCollapse }) => (openCollapse ? showText : hideText)};
   }
 `;
 
 const StyledButton = styled(Button)`
   .MuiButton-label {
     justify-content: space-between;
-  }
-
-  &&& {
-    .MuiButton-endIcon {
-      transform: ${(props) => (props.openCollapse ? 'rotate(180deg)' : 'rotate(0deg)')};
-      transition: all 1s ease;
-    }
   }
 `;
 
@@ -66,7 +59,7 @@ const Collapse = ({ title, description }) => {
         fullWidth
         variant="text"
         onClick={handleClick}
-        endIcon={<ExpandLess />}
+        endIcon={open ? <ExpandMore /> : <ExpandLess />}
       >
         <span>{title}</span>
       </StyledButton>

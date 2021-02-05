@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressiveImage from 'react-progressive-image';
 import Carousel from '../Carousel';
 import data from '../stories.data/testData';
 
@@ -7,6 +8,13 @@ export default {
   component: Carousel,
 };
 
+const dominantImageColor = '#86356B';
+const placeholder = (
+  <div
+    style={{ backgroundColor: dominantImageColor, height: 300, width: 500 }}
+  />
+);
+
 export const AutoSlide = () => (
   <Carousel
     autoSlide
@@ -14,10 +22,9 @@ export const AutoSlide = () => (
         data.map((item) => {
           const { imageUrl } = item;
           return (
-            <img
-              src={imageUrl}
-              alt="test"
-            />
+            <ProgressiveImage src={imageUrl} placeholder="">
+              {(src, loading) => (loading ? placeholder : <img src={src} alt="an image" />)}
+            </ProgressiveImage>
           );
         })
     }
@@ -30,10 +37,9 @@ export const Slide = () => (
         data.map((item) => {
           const { imageUrl } = item;
           return (
-            <img
-              src={imageUrl}
-              alt="test"
-            />
+            <ProgressiveImage src={imageUrl} placeholder="">
+              {(src, loading) => (loading ? placeholder : <img src={src} alt="an image" />)}
+            </ProgressiveImage>
           );
         })
     }
