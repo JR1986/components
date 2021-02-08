@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "storybook": "start-storybook -p 6006 --no-dll",
-    "build-storybook": "build-storybook --no-dll"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@babel/preset-env": "^7.12.1",

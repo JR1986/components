@@ -65,6 +65,20 @@ const theme = createMuiTheme({
         },
       },
     },
+    MuiFormLabel: {
+      styleOverrides: {
+        root: {
+          color: textPrimary,
+        },
+      },
+    },
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          color: primary,
+        },
+      },
+    },
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
