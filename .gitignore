@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/pages/storybook
 /.pnp
 .pnp.js
 
